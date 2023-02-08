@@ -27,14 +27,15 @@ View(housesales)
 housesales %>% 
   filter(year==2015)
 
-
+#using the source data and filter command to find 2015 results
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
 
 housesales %>% 
-  filter(year>=2015)
+  filter(year>=2010)
 
+#using the source data and filter command 'more than or equal' to find 2010 forward results
 
 # 3) The "city" column contains the relevant city. Filter to return only results for Houston
 # (note, remember R is case sensitive)
@@ -44,7 +45,7 @@ housesales %>%
 housesales %>% 
   filter(city=="Houston")
 
-
+#using the source data and filter command to find only Houston results
 
 # 4) Filter for only where the city is Houston as above, and now also filter for only 
 # the year 2010. The results should give you 12 records, one for each month in 2010 for Houston.
@@ -55,6 +56,8 @@ housesales %>%
   filter(year==2010)
 
 
+#using the source data and filter command to find only Houston results from year 2010
+
 # 5) Build on what you've done above. Filter for only where the city is Houston as above, 
 # and the year is 2010. Now add a sort using arrange() to sort the results based on the number
 # of home sales (the "sales" column) from most to least.
@@ -64,7 +67,7 @@ housesales %>%
   filter(year==2010) %>% 
   arrange(desc(sales))
 
-
+#using the source data and filter command to find only Houston sales results from year 2010 in desc order
 
 # 6) Piggyback on what you've done above. 
 # Do the same as #5, only this time instead of Houston return records for Dallas
@@ -75,6 +78,7 @@ housesales %>%
   filter(year==2010) %>% 
   arrange(desc(sales))
 
+#using the source data and filter command to find only Dallas sales results from year 2010 in desc order
 
 # 7) Sometimes metrics like home sales have a seasonal quality to them, much like 
 # retail sales. There are times of year that are naturally more active, and others where
@@ -90,7 +94,7 @@ housesales %>%
   filter(city=="Dallas") %>% 
   filter(month==6)
 
-
+#using the source data and filter command to find only Dallas sales results from June
 
 # 8) Build on what we've done above. Now that we have June numbers for Dallas for every year,
 # arrange the results by sales from highest-to-lowest to show what year had the highest June sales.
@@ -101,7 +105,7 @@ housesales %>%
   filter(month==6) %>% 
   arrange(desc(sales))
 
-
+#using the source data and filter command to find only Dallas sales results from June in desc order
 
 # 9) Now do the same as Question 8, but this time instead of Dallas, show results for Corpus Christi
 
@@ -112,6 +116,7 @@ housesales %>%
   filter(month==6) %>% 
   arrange(desc(sales))
 
+#using the source data and filter command to find only Corpus Christi sales results from June in desc order
 
 # 10) Finally, using the Corpus Christi code from Question 9, instead of June
 # use the month of February (2) instead.
@@ -120,3 +125,5 @@ housesales %>%
   filter(city=="Corpus Christi") %>% 
   filter(month==2) %>% 
   arrange(desc(sales))
+
+#using the source data and filter command to find only Corpus Christi sales results from February in desc order
