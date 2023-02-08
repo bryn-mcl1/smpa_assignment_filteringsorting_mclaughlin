@@ -88,8 +88,7 @@ housesales %>%
 
 housesales %>% 
   filter(city=="Dallas") %>% 
-  filter(month==6) %>% 
-  arrange(desc(sales))
+  filter(month==6)
 
 
 
@@ -97,7 +96,10 @@ housesales %>%
 # arrange the results by sales from highest-to-lowest to show what year had the highest June sales.
 
 
-
+housesales %>% 
+  filter(city=="Dallas") %>% 
+  filter(month==6) %>% 
+  arrange(desc(sales))
 
 
 
@@ -105,9 +107,16 @@ housesales %>%
 
 
 
-
+housesales %>% 
+  filter(city=="Corpus Christi") %>% 
+  filter(month==6) %>% 
+  arrange(desc(sales))
 
 
 # 10) Finally, using the Corpus Christi code from Question 9, instead of June
 # use the month of February (2) instead.
 
+housesales %>% 
+  filter(city=="Corpus Christi") %>% 
+  filter(month==2) %>% 
+  arrange(desc(sales))
